@@ -1,0 +1,31 @@
+<div class="container w-100 mt-2 p-3 text-center bg-secondary text-white border" style=" font-size: 2em; border-radius: 20px;">
+
+    <table class="text-center w-100">
+        <thead>
+            <tr>
+                <th class="border">Customer ID</th>
+                <th class="border">Vechile Type</th>
+                <th class="border">Date</th>
+                <th class="border">Description</th>
+                <th class="border text-center">Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+         <tr *ngFor="let i of uhiArray">
+            <td><input #cidq id="cidssss" style="border: none;" name="studentisss"  style="border: none;" value="{{i.cid}}" type="text"></td>
+            <td>{{i.vtype}}</td>
+            <td>{{i.Date}}</td>
+            <td>{{i.desc}}</td>
+            <td><button (click)="accept(cidq)" class="btn btn-success">accept</button></td>
+            <td><button (click)="reject(cidq)" class="btn btn-danger">Reject</button></td>
+         </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- 
+  Vmodel: vmodel,
+  Desc: desc,
+  vtype,
+  date -->

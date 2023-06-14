@@ -1,0 +1,76 @@
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class=" mt-3 ps-3">
+            <h3 class=" text-white"></h3>
+        </div>
+
+
+        <form [formGroup]="c_loginForm" style="background-color: rgba(240, 248, 255, 0.384); border-radius: 30px;"
+            action="" class=" mt-5 p-3 w-50 container text-center">
+
+            <h1 class="text-center mt-1" style="color: rgb(0, 0, 0);">Customer Login</h1>
+
+
+            <div class="p-2 mt-2">
+                <input formControlName="cid" id="ac1" name="c_id" class="form-control mt-2 p-2" type="text"
+                    placeholder="ENTER CUSTOMER ID">
+            </div>
+
+            <div *ngIf="this.c_loginForm.get('cid')?.errors && this.c_loginForm.get('cid')?.touched"
+                class="text-start ms-2">
+                <p class="text-danger">include numbers only</p>
+            </div>
+
+            <div class="p-2 mt-2">
+                <input formControlName="psw" id="p1" name="c_psw" class="form-control mt-2 p-2" type="password"
+                    placeholder="ENTER PASSWORD">
+            </div>
+
+            <div *ngIf="this.c_loginForm.get('psw')?.errors && this.c_loginForm.get('psw')?.touched"
+                class="text-start ms-2">
+                <p class="text-danger">include characters and numbers only</p>
+            </div>
+
+            <button (click)="login()" type="submit" class="btn btn-dark mt-4 p-2">LOG-IN</button>
+
+            <p id="link"  class="p-2 mt-2">Don't Have an Account <a routerLink="register">Register Here</a></p>
+
+        </form>
+    </div>
+
+
+    <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class=" mt-3 ps-3">
+            <h3 class=" text-white"></h3>
+        </div>
+
+        <form [formGroup]="a_loginForm" style="background-color: rgba(240, 248, 255, 0.384); border-radius: 30px;"
+            action="" class=" mt-5 p-3 w-50 container text-center">
+
+            <h1 class="text-center mt-1" style="color: rgb(0, 0, 0);">Admin Login</h1>
+
+
+            <div class="p-2 mt-2">
+                <input formControlName="aid" id="ac2" name="a_id" class="form-control mt-2 p-2" type="text"
+                    placeholder="ENTER ADMIN ID">
+            </div>
+
+            <div *ngIf="this.a_loginForm.get('aid')?.errors && this.a_loginForm.get('aid')?.touched"
+                class="text-start ms-2">
+                <p class="text-danger">include numbers only</p>
+            </div>
+
+            <div class="p-2 mt-2">
+                <input formControlName="apsw" id="p2" name="a_psw" class="form-control mt-2 p-2" type="password"
+                    placeholder="ENTER PASSWORD">
+            </div>
+
+            <div *ngIf="this.a_loginForm.get('apsw')?.errors && this.a_loginForm.get('apsw')?.touched"
+                class="text-start ms-2">
+                <p class="text-danger">include characters and numbers only</p>
+            </div>
+
+            <button (click)="alogin()" class="btn btn-dark mt-4 p-2">LOG-IN</button>
+        </form>
+    </div>
+</div>

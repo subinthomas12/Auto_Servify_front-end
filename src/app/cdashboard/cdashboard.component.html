@@ -1,0 +1,145 @@
+<!-- <div class="mt-3 ps-3">
+    <h3 class=" text-white"></h3>
+</div>
+
+<form [formGroup]="vregisterForm" style="background-color: rgba(240, 248, 255, 0.384); border-radius: 30px;" action=""
+    class=" mt-5 p-3 w-50 container text-center">
+
+    <h1 class="text-center mt-1" style="color: rgb(0, 0, 0);">Customer Portal</h1>
+
+    <div class="p-2 mt-2">
+        <input formControlName="vnum" id="vnums" name="v_num" class="form-control mt-2 p-2" type="text"
+            placeholder="VEHICLE NUMBER">
+    </div>
+
+    <div *ngIf="this.vregisterForm.get('vnum')?.errors && this.vregisterForm.get('vnum')?.touched"
+        class="text-start ms-2">
+        <p class="text-danger">include numbers only</p>
+    </div>
+
+    <div class="p-2 mt-2">
+        <input formControlName="vtype" id="vt" name="v_type" class="form-control mt-2 p-2" type="text"
+            placeholder="VEHICLE TYPE">
+    </div>
+
+    <div *ngIf="this.vregisterForm.get('vtype')?.errors && this.vregisterForm.get('vtype')?.touched"
+        class="text-start ms-2">
+        <p class="text-danger">include characters only</p>
+    </div>
+
+    <div class="p-2 mt-2">
+        <input formControlName="date" id="d" name="d_ate" class="form-control mt-2 p-2" type="date" placeholder="DATE">
+    </div>
+    <div *ngIf="this.vregisterForm.get('date')?.errors && this.vregisterForm.get('date')?.touched"
+        class="text-start ms-2">
+        <p class="text-danger">include characters and numbers only</p>
+    </div>
+
+
+
+    <div class="p-2 mt-2">
+        <input formControlName="desc" id="dec" name="de_sc" class="form-control mt-2 p-2" type="text"
+            placeholder="ANY SPECIAL INSTRUCTION">
+    </div>
+
+    <div *ngIf="this.vregisterForm.get('desc')?.errors && this.vregisterForm.get('desc')?.touched"
+        class="text-start ms-2">
+        <p class="text-danger">include characters and numbers only</p>
+    </div>
+
+
+    <button (click)="vregister()" class="btn btn-dark mt-4 p-2">Register</button>
+</form> -->
+
+
+
+
+
+<!-- <div class="mt-3 ps-3">
+    <h3 class="text-white"></h3>
+</div> -->
+
+<div>
+    <button (click)="logout()" class="btn btn-danger">logout</button>
+</div>
+
+<h1 class="text-center mt-1" style="color: rgb(16, 66, 86);">Register Here</h1>
+
+<form [formGroup]="vregisterForm" style="background-color: rgba(240, 248, 255, 0.384); border-radius: 30px;" action=""
+    class=" mt-5 p-3 w-25 h-10 container text-center">
+
+    <div class="p-2 mt-2">
+        <input formControlName="cid" id="v" name="numbers" class="form-control mt-2 p-2" type="text"
+            placeholder="CUSTOMER ID">
+    </div>
+    <div *ngIf="this.vregisterForm.get('cid')?.errors && this.vregisterForm.get('cid')?.touched"
+        class="text-start ms-2">
+        <p class="text-danger">include characters and numbers only</p>
+    </div>
+
+    <div class="p-2 mt-2">
+        <input formControlName="vnum" id="vnum" name="number" class="form-control mt-2 p-2" type="text"
+            placeholder="VEHICLE NUMBER">
+    </div>
+    <div *ngIf="this.vregisterForm.get('vnum')?.errors && this.vregisterForm.get('vnum')?.touched"
+        class="text-start ms-2">
+        <p class="text-danger">include characters and numbers only</p>
+    </div>
+
+    <div class="p-2 mt-2">
+        <input formControlName="squery" id="vs" name="v_ser" class="form-control mt-2 p-2" type="text"
+            placeholder="Service Query">
+    </div>
+    <div *ngIf="this.vregisterForm.get('squery')?.errors && this.vregisterForm.get('squery')?.touched"
+        class="text-start ms-2">
+        <p class="text-danger">include characters only</p>
+    </div>
+
+    <div class="p-2 mt-2 type">
+        <input formControlName="vtype" id="vt" name="v_type" class="form-control mt-2 p-2" type="s"
+            placeholder="VEHICLE TYPE     - eg: SUV">
+        <!-- <div class="vtype">
+            <label class="bg-white form-control " formControlName="vtype" id="vt" name="v_type" type="text" for="">VEHICLE TYPE</label>
+
+        </div> -->
+        <!-- <div>
+         <select class="selt" name="" id="">
+            <option value="">VEHICLE TYPE</option>
+
+            <option formControlName="vtype" id="va" name="a_type" value="">SUV</option>
+            <option formControlName="vtype" id="vb" name="b_type" value="">HATCHBACK</option>
+            <option formControlName="vtype" id="vc" name="c_type" value="">SEDAN</option>
+        </select>
+    </div> -->
+    </div>
+
+    <div *ngIf="this.vregisterForm.get('vtype')?.errors && this.vregisterForm.get('vtype')?.touched"
+        class="text-start ms-2">
+        <p class="text-danger">include characters only</p>
+    </div>
+
+    <div class="p-2 mt-2">
+        <input formControlName="date" id="date1" name="datee" class="form-control mt-2 p-2" type="date"
+            placeholder="Enter Date">
+    </div>
+    <div *ngIf="this.vregisterForm.get('date')?.errors && this.vregisterForm.get('date')?.touched"
+        class="text-start ms-2">
+        <p class="text-danger">include characters and numbers only</p>
+    </div>
+
+    <div class="p-2 mt-2">
+        <input formControlName="desc" id="p2" name="password" class="form-control mt-2 p-2" type="text"
+            placeholder="ANY SPECIAL INSTRUCTION">
+    </div>
+    <div *ngIf="this.vregisterForm.get('desc')?.errors && this.vregisterForm.get('desc')?.touched"
+        class="text-start ms-2">
+        <p class="text-danger">include characters and numbers only</p>
+    </div>
+
+
+    <button (click)="vregister()" type="submit" class="btn btn-dark mt-4 p-2">Register</button>
+</form> 
+
+
+
+<a style="font-weight: bolder; font-size: larger;" class="container text-center" routerLink="/views">View Status</a>
